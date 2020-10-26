@@ -75,7 +75,7 @@ class IDCardChecker {
       const year = this.getYear(dateString);
       const month = this.getMonth(dateString);
       const date = this.getDay(dateString);
-      const fullDate = new Date(`${year}-${month}-${date}`);
+      const fullDate = new Date(`${year}/${month}/${date}`);
       if (fullDate && fullDate.getMonth() === month - 1) {
         return true;
       }
@@ -190,7 +190,7 @@ class IDCardChecker {
       const year = this.getYear(birthDate);
       const month = this.getMonth(birthDate);
       const date = this.getDay(birthDate);
-      return new Date(`${year}-${month}-${date}`);
+      return new Date(`${year}/${month}/${date}`);
     }
     return null;
   }
